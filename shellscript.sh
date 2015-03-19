@@ -1,0 +1,1 @@
+pwd > /tmp/logg.txt
