@@ -1,0 +1,7 @@
+---
+- hosts: 173.37.41.240
+  remote_user: root
+  tasks:
+  - name: restart machine
+    shell: ls >lsopt1.txt
+
