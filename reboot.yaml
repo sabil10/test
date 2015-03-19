@@ -1,0 +1,14 @@
+---
+- hosts: 173.37.41.240
+  remote_user: root
+  tasks:
+  - name: restart machine
+    command: shutdown -r now "Ansible updates triggered"
+    async: 0
+    poll: 0
+    ignore_errors: true
+  - name: waiting for server to come back
+    local_action: wait_for host=173.37.41.240 state=started port=22 delay=1 timeout=300
+  - name : test
+    shell: ls >lsopt1.txt
+
