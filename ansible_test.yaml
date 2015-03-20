@@ -1,7 +1,7 @@
 ---
-- hosts: 173.37.41.240
+- hosts: cloudera
   remote_user: root
   tasks:
   - name: restart machine
-    shell: ls >lsopt1.txt
+    shell: ls >/tmp/lsopt2.txt
 
